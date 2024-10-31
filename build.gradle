@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    maven {
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+
+    maven {
+        url 'https://jitpack.io'
+    }
+
+    maven { url "https://maven.enginehub.org/repo/" }
+}
+
+dependencies {
+    compileOnly 'me.playbosswar.com:commandtimer:7.1.1'
+    compileOnly 'org.jetbrains:annotations:23.1.0'
+    compileOnly 'org.jeasy:easy-rules-core:4.1.0'
+    implementation 'com.github.Zrips:Jobs:4.17.2'
+    implementation 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
+}
+
+test {
+    useJUnitPlatform()
+}
